@@ -40,7 +40,7 @@ define('MAILGUN_URL', 'https://api.eu.mailgun.net/v3/mg.yaraa.io');
 define('MAILGUN_KEY', 'key-1d8418e80a8109b407e968d29267ea1d');
 
 // Core API base URL
-define('CORE_BASE_URL', 'https://api.yaraa.io/');
+define('CORE_BASE_URL', 'https://sebore-api-production.up.railway.app/');
 
 // define the db to use
 $urlBits = explode('.', $_SERVER['HTTP_HOST'])[0];
