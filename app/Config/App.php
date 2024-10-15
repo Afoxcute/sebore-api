@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost/';
+	public $baseURL = 'https://sebore-api.onrender.com/';
 
 	/*
 	|--------------------------------------------------------------------------
