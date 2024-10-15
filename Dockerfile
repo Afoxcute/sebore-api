@@ -20,8 +20,8 @@ RUN apt-get update -y && apt-get install -y \
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY .htaccess .
-COPY  public /var/www/html/
-COPY index.php /var/www/html/
+COPY public /var/www/html/
+#COPY index.php /var/www/html/
 
 # PHP Extension
 RUN docker-php-ext-install gettext intl mysqli pdo pdo_mysql gd zip
