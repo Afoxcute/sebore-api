@@ -19,7 +19,7 @@ RUN apt-get update -y && apt-get install -y \
 
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-COPY .htaccess .
+COPY .htaccess /var/www/html/
 COPY public /var/www/html/
 #COPY index.php /var/www/html/
 
