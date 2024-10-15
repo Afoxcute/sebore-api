@@ -32,6 +32,10 @@ RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd
 
 
+# Set permissions
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html/writable
+
 # Configure Apache document root
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
@@ -47,7 +51,7 @@ RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoload
 ENV CI_ENVIRONMENT production
 
 # Expose port 80
-#EXPOSE 80
+EXPOSE 80
 
 # Start Apache
 CMD ["apache2-foreground"]
