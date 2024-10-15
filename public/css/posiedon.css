@@ -1,0 +1,18 @@
+
+/* Style required for sweet alert */
+
+.swal-text, .swal-title{
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.swal-footer {
+    text-align: center;
+}
+
+.widt-form{
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+  }
