@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'https://sebore-api-production.up.railway.app/';
+	public $baseURL = 'http://sebore-api-production.up.railway.app/';
 
 	/*
 	|--------------------------------------------------------------------------
