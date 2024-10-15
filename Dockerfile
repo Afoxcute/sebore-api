@@ -19,8 +19,10 @@ RUN apt-get update -y && apt-get install -y \
 
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-COPY .htaccess /var/www/html/
-COPY public /var/www/html/
+#COPY .htaccess /var/www/html/
+COPY . /var/www/html/
+RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+
 #COPY index.php /var/www/html/
 
 # PHP Extension
