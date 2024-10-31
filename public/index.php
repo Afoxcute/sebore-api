@@ -33,7 +33,7 @@ require $pathsPath;
 $paths = new Config\Paths();
 
 // Location of the framework bootstrap file.
-$app = require rtrim($paths->systemDirectory, '/system/bootstrap.php ') . '/bootstrap.php';
+$app = require rtrim($paths->systemDirectory, '/ ') . '/bootstrap.php';
 
 // Mail Gun Settings
 define('MAILGUN_URL', 'https://api.eu.mailgun.net/v3/mg.yaraa.io');
