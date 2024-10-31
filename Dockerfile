@@ -15,6 +15,7 @@ COPY ./ /var/www/html/
 
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+RUN composer install
 #COPY .htaccess /var/www/html/
 COPY . /var/www/html/
 RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
